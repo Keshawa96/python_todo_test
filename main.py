@@ -11,12 +11,12 @@
 # user_text = input(user_prompt)
 # print(user_text)
 
-firstname = "Keshawa"
-middlename = "Malindra"
-lastname = "Methinda"
+action = "Enter a todo :"
 
-person = [firstname , middlename , lastname , "Hellow"]
+todos = []
 
-print(person)
-print(type(person))
-
+while True :
+    todo=input(action)
+    todos.append(todo)
+    print("Here is the todo list : " , todos)
+ 
