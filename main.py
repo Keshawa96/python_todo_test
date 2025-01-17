@@ -11,12 +11,24 @@
 # user_text = input(user_prompt)
 # print(user_text)
 
-action = "Enter a todo :"
+
 
 todos = []
 
 while True :
-    todo=input(action)
-    todos.append(todo)
-    print("Here is the todo list : " , todos)
+    action1 = input("Type add,show or exit :")
 
+    match action1:
+        case 'add':
+            todo = input("Enter a todo:")
+            todos.append(todo)
+        case 'show':
+            print("The todo list :" ,todos)
+        case 'exit':
+            break
+
+
+print("Exiting from the todo list !")
+   
+   
+    
