@@ -17,13 +17,16 @@ todos = []
 
 while True :
     action1 = input("Type add,show or exit :")
+    action1 = action1.strip()
 
     match action1:
         case 'add':
             todo = input("Enter a todo:")
             todos.append(todo)
         case 'show':
-            print("The todo list :" ,todos)
+            for item in todos:
+                print(item)
+            # print("The todo list :" ,todos)
         case 'exit':
             break
 
