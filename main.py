@@ -16,7 +16,7 @@
 todos = []
 
 while True :
-    action1 = input("Type add,show or exit :")
+    action1 = input("Type add,show , edit or exit :")
     action1 = action1.strip()
 
     match action1:
@@ -27,8 +27,20 @@ while True :
             for item in todos:
                 print(item)
             # print("The todo list :" ,todos)
+
+        case 'edit':
+            number = int(input("Number of the todo to edit :"))
+            number = number -1
+            new_todo = input("Enter new todo:")
+            todos[number] = new_todo
+
         case 'exit':
             break
+
+        case x:
+            print("You entered and unknown command !")
+
+        
 
 
 print("Exiting from the todo list !")
